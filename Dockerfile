@@ -6,4 +6,4 @@ RUN pip install poetry
 
 RUN poetry install
 
-CMD ["python", "main.py"]
+CMD ["poetry", "run", "python", "main.py"]
