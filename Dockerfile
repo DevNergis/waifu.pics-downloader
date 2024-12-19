@@ -1,10 +1,6 @@
-FROM python:alpine
+FROM python
 
 COPY . .
-
-RUN apk add bash
-
-RUN bash
 
 RUN pip install poetry
 
