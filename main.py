@@ -31,7 +31,7 @@ async def fetch_and_save_waifus(type: str, count: int):
     results = await fetch_multiple_waifus(type, count)
     for i, result in enumerate(results):
         for url in result['files']:
-            filename = f"waifu_{url.split('/')[-1]}"
+            filename = url.split('/')[-1]
             await download_image(url, filename)
 
 async def fetch_and_save_waifus_forever(type: str, count: int):
