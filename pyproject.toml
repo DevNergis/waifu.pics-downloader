@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "waifu-pics-downloader"
+version = "0.1.0"
+description = ""
+authors = ["Dev_Nergis <136839304+DevNergis@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "waifu"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pylint = "^3.3.2"
+black = "^24.10.0"
+mypy = "^1.13.0"
+aiohttp = {extras = ["speedups"], version = "^3.11.11"}
+aiofiles = "^24.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
