@@ -2,6 +2,7 @@ import asyncio
 import random
 import aiohttp
 import aiofiles
+import time
 
 async def fetch_waifus(type: str, category: str):
     url = f"https://api.waifu.pics/many/{type}/{category}"
@@ -37,6 +38,7 @@ async def fetch_and_save_waifus(type: str, count: int):
 async def fetch_and_save_waifus_forever(type: str, count: int):
     while True:
         await fetch_and_save_waifus(type, count)
+        time.sleep(60)
 
 # Example usage
 
