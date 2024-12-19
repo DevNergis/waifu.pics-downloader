@@ -1,10 +1,8 @@
-FROM python
+FROM python:alpine
 
 COPY . .
 
 RUN pip install poetry
-
-RUN poetry shell
 
 RUN poetry install
 
