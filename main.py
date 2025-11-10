@@ -18,7 +18,7 @@ async def fetch_multiple_waifus(type: str, count: int):
     results = await asyncio.gather(*tasks)
     return results
 
-SAVE_PATH = "/mnt/teldrive/waifu/"
+SAVE_PATH = "./waifus/"
 
 async def download_image(url: str, filename: str):
     async with aiohttp.ClientSession() as session:
